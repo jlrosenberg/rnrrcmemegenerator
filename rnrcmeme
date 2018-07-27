@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>About</title>
+<link rel="stylesheet" type="text/css" href="stylesheet.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js" type="text/javascript"><!--mce:0--></script>
+
+<script>
+ function submit(){
+	 var cap=document.getElementById("caption");
+	 var rb1=document.getElementById("rb1").checked;
+	 alert("here");
+	 var a=0;
+	 if(rb1){
+	 	a=1;
+	 }else
+	 {
+		 a=0;
+	 }
+
+	 alert("gee");
+	 var genID=[7487503,7482667];
+	 var url="http:////version1.api.memegenerator.net/Instance_Create?username=jimgill&password=jimgill&languageCode=en&generatorID="+genID[a]+"&text"+a+"="+cap.value;
+	// openWindow(url);
+	 //var url="http://version1.api.memegenerator.net/Instance_Create?username=jimgill&password=jimgill&languageCod";
+	 	// openWindow(httpGet(url).result);
+		 var json=JSON.parse(httpGet(url));
+		 openWindow(json.result.instanceUrl);
+
+ }
+ function openWindow( url ) {
+	 alert("Here");
+window.open(url, '_blank');
+window.focus();
+}
+
+function httpGet(theUrl)
+{
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
+    xmlHttp.send( null );
+    return xmlHttp.responseText;
+}
+
+</script>
+</head>
+
+<body>
+
+
+<div style="margin:60px;">
+<p style="font-size:25px; color:#FFF;"> Welcome to the meme generator. On this page, your imagination is the limit - any rnrc meme you can think of is only moments away from reality!</p>
+<div id="infoSelect">
+<p style="font-size:50px; color:#FFF">1. Select Your Image</p>
+ <div style="font-size:25px; color:#FFF;"> <input type="radio" name="imgSelect" value="0" id="rb1" checked> Age knows no limits!</div><br>
+ <div style="font-size:25px; color:#FFF;"> <input type="radio" name="imgSelect" value="1" id="rb2"> Always Well Dressed</div><br>
+
+<p style="font-size:50px; color:#FFF">2. Caption</p>
+<input type="text" name="caption" id="caption" style="width:800px; height:30px; font-size:30px;" />
+
+<button onclick="submit()" style="width:300px; height:40px; font-size:30px; margin-left:10px;">Generate Meme</button>
+</div>
+</div>
+</body>
+</html>
