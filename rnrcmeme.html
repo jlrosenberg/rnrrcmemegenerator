@@ -19,14 +19,24 @@
 	 {
 		 a=1;
      index=1;
-	 }else{
+	 }else if(document.getElementById("rb3").checked){
      a=1;
      index=2;
-
-     //alert("Gererere");
+   }
+   else if(document.getElementById("rbAloot").checked){
+     index=3;
+     a=0;
+   }
+   else if(document.getElementById("rbBLAntonio").checked){
+     index=4;
+     a=1;
+   }
+   else if(document.getElementById("rbDani").checked){
+     index=5;
+     a=1;
    }
 
-	 var genID=[9730435,9717895,9730473];
+	 var genID=[9730435,9717895,9730473,9730571,9730594,9730582];
 	 var url="http:////version1.api.memegenerator.net/Instance_Create?username=jimgill&password=jimgill&languageCode=en&generatorID="+genID[index]+"&text"+a+"="+cap.value;
 	// openWindow(url);
 	 //var url="http://version1.api.memegenerator.net/Instance_Create?username=jimgill&password=jimgill&languageCod";
@@ -62,6 +72,9 @@ function httpGet(theUrl)
  <div style="font-size:25px; color:#FFF;"> <input type="radio" name="imgSelect" value="0" id="rb1" checked> Inspirational Antonio<br><img src="https://memegenerator.net/img/images/72465525/inspirational-antonio.jpg" style="height:200px; width:130px;"></img></div><br>
  <div style="font-size:25px; color:#FFF;"> <input type="radio" name="imgSelect" value="1" id="rb2"> Joey Cantaffa<br><img src="https://memegenerator.net/img/images/72459634/joeycantaffa.jpg" style="height:200px; width:130px;"></img></div><br>
   <div style="font-size:25px; color:#FFF;"> <input type="radio" name="imgSelect" value="2" id="rb3"> Mustache Erc<br><img src="https://memegenerator.net/img/images/72465539/stache-eric.jpg" style="height:200px; width:130px;"></img></div><br>
+    <div style="font-size:25px; color:#FFF;"> <input type="radio" name="imgSelect" value="3" id="rbAloot"> Aloot<br><img src="https://memegenerator.net/img/images/72465591/aloot.jpg" style="height:200px; width:130px;"></img></div><br>
+        <div style="font-size:25px; color:#FFF;"> <input type="radio" name="imgSelect" value="2" id="rbBLAntonio"> Bad Luck Antonio<br><img src="https://memegenerator.net/img/images/72465608/bad-luck-antonio.jpg" style="height:200px; width:130px;"></img></div><br>
+            <div style="font-size:25px; color:#FFF;"> <input type="radio" name="imgSelect" value="2" id="rbDani"> Wubble Bubble Dani<br><img src="https://memegenerator.net/img/images/72465599/wubblebubbledani.jpg" style="height:200px; width:130px;"></img></div><br>
 
 <p style="font-size:50px; color:#FFF">2. Caption</p>
 <input type="text" name="caption" id="caption" style="width:800px; height:30px; font-size:30px;" />
