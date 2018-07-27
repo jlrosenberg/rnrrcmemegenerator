@@ -12,17 +12,22 @@
 	 var rb1=document.getElementById("rb1").checked;
    var rb2=document.getElementById("rb2").checked;
 	 var a=0;
+   var index=0;
 	 if(rb1){
 	 	a=0;
   }else if(rb2)
 	 {
 		 a=1;
+     index=1;
 	 }else{
-     a=2;
+     a=1;
+     index=2;
+
+     //alert("Gererere");
    }
 
-	 var genID=[9730435,9717895,9730435];
-	 var url="http:////version1.api.memegenerator.net/Instance_Create?username=jimgill&password=jimgill&languageCode=en&generatorID="+genID[a]+"&text"+a+"="+cap.value;
+	 var genID=[9730435,9717895,9730473];
+	 var url="http:////version1.api.memegenerator.net/Instance_Create?username=jimgill&password=jimgill&languageCode=en&generatorID="+genID[index]+"&text"+a+"="+cap.value;
 	// openWindow(url);
 	 //var url="http://version1.api.memegenerator.net/Instance_Create?username=jimgill&password=jimgill&languageCod";
 	 	// openWindow(httpGet(url).result);
@@ -31,7 +36,7 @@
 
  }
  function openWindow( url ) {
-	 alert("Here");
+	// alert("Here");
 window.open(url, '_blank');
 window.focus();
 }
